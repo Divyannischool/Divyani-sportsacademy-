@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Champions Sports Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "on-secondary-container": "#5c2400",
+                      "on-primary-fixed": "#131b2e",
+                      "background": "#f7f9fb",
+                      "primary-fixed": "#dae2fd",
+                      "on-tertiary-container": "#76859b",
+                      "tertiary-container": "#0d1c2f",
+                      "inverse-on-surface": "#eff1f3",
+                      "tertiary-fixed-dim": "#b9c7e0",
+                      "on-secondary-fixed-variant": "#783200",
+                      "surface-container-high": "#e6e8ea",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed": "#0d1c2f",
+                      "on-secondary-fixed": "#341100",
+                      "outline": "#76777d",
+                      "on-primary-container": "#7c839b",
+                      "primary-container": "#131b2e",
+                      "surface-bright": "#f7f9fb",
+                      "primary": "#000000",
+                      "surface": "#f7f9fb",
+                      "inverse-primary": "#bec6e0",
+                      "secondary-fixed": "#ffdbca",
+                      "tertiary-fixed": "#d5e3fd",
+                      "on-background": "#191c1e",
+                      "surface-variant": "#e0e3e5",
+                      "surface-tint": "#565e74",
+                      "on-surface": "#191c1e",
+                      "surface-dim": "#d8dadc",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#fd761a",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#3a485c",
+                      "outline-variant": "#c6c6cd",
+                      "error-container": "#ffdad6",
+                      "on-surface-variant": "#45464d",
+                      "surface-container": "#eceef0",
+                      "tertiary": "#000000",
+                      "surface-container-low": "#f2f4f6",
+                      "secondary": "#9d4300",
+                      "primary-fixed-dim": "#bec6e0",
+                      "inverse-surface": "#2d3133",
+                      "secondary-fixed-dim": "#ffb690",
+                      "on-error": "#ffffff",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "container-max": "1280px",
+                      "margin-desktop": "48px",
+                      "stack-md": "24px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "stack-lg": "64px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Montserrat"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Montserrat"
+                      ],
+                      "display-lg": [
+                              "Montserrat"
+                      ],
+                      "label-bold": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Montserrat"
+                      ],
+                      "caption": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "caption": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Card Hover ambient shadow */
+        .card-hover:hover {
+            box-shadow: 0px 10px 25px -5px rgba(15, 23, 42, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest sticky top-0 w-full z-50 border-b border-outline-variant flat no shadows">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">Champions Sports Academy</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-secondary font-bold border-b-2 border-secondary font-label-bold text-label-bold" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold" href="#sports">Sports</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold" href="#coaches">Coaches</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold" href="#facilities">Facilities</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors duration-200 font-label-bold text-label-bold" href="#contact">Contact</a>
+</div>
+<button class="bg-secondary-container text-on-primary font-label-bold text-label-bold py-2 px-6 rounded hover:brightness-90 transition-all opacity-80 scale-95 hover:opacity-100 hover:scale-100 hidden md:block">Join Academy</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[80vh] flex items-center justify-center overflow-hidden" id="home">
+<div class="absolute inset-0 bg-primary/70 z-10"></div>
+<img alt="" class="absolute inset-0 w-full h-full object-cover z-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeja7D3oYxhGJp5-tad1jIBfOoXpiu0vD_sMQb_G-8gkVdj8vCElF6gZcuatwciR_evuVr_xLPgYiLpkyD41QJ5e2nfkagWAb0hcfw8sk_TeuOlnCqvjv_oqKj2Bh0npRPxdCWBd8yVIAvbgt6kc07DDNA61WsOUf8uVKUs9tyDNkQJfe_4oJ40UOqkT6y--L3r5ePy1c9dnD4Sn3Y8HptAK0DGABEsOfpZB9LGM-83hu7S-MFqnDk"/>
+<div class="relative z-20 text-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto fade-in-up">
+<h1 class="font-display-lg text-display-lg text-on-primary mb-stack-sm md:mb-stack-md uppercase tracking-tight">Train Hard. <span class="text-secondary-container">Play Smart.</span><br/>Become a Champion.</h1>
+<p class="font-body-lg text-body-lg text-surface-container max-w-2xl mx-auto mb-stack-md">Elite performance training for athletes dedicated to excellence.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-secondary-container text-on-primary font-label-bold text-label-bold py-3 px-8 rounded hover:brightness-90 transition-all uppercase tracking-wide" href="#contact">Join Now</a>
+<a class="bg-transparent border-2 border-on-primary text-on-primary font-label-bold text-label-bold py-3 px-8 rounded hover:bg-on-primary hover:text-primary transition-all uppercase tracking-wide" href="#sports">Explore Sports</a>
+</div>
+</div>
+</header>
+<!-- About Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface max-w-container-max mx-auto" id="about">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center fade-in-up">
+<div>
+<h2 class="font-headline-lg text-headline-lg md:text-headline-lg text-primary mb-stack-md">Forging Champions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">At Champions Sports Academy, our mission is to cultivate not just elite athletes, but well-rounded individuals. We provide a disciplined, high-performance environment where talent meets rigorous training.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Our vision is to be the premier institution for sports development, utilizing state-of-the-art facilities and professional coaching to unlock every player's ultimate potential.</p>
+<ul class="space-y-2 font-label-bold text-label-bold text-primary">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Elite Coaching Staff</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container">check_circle</span> Comprehensive Player Development</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary-container">check_circle</span> State-of-the-art Facilities</li>
+</ul>
+</div>
+<div class="relative h-96 rounded-xl overflow-hidden shadow-lg">
+<div class="absolute inset-0 bg-primary/20 z-10"></div>
+<img class="w-full h-full object-cover z-0" data-alt="High intensity professional sports training session in a modern indoor facility. Athletes engaged in dynamic exercises. Cinematic lighting, deep shadows with bright highlights, emphasizing effort and focus. Sharp, high-contrast style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClNTQOxfmOSo1-rH3av08LmsvsZCAoB9RuG_WPUsEuhj_Gxre2VRSUqJUmEb4EGEhrG4WJL9AdwCR_f_PL3SZ4v7HukyNashAHJJIhDcYUBQDZuZ3VFTCQ3T1jM1n7Y1EQGhRLwMOzTyDUr3M0ymdaXinpdk5aPVZ_j03JkDZCIBsCQWer8-9uYF_sfvJZcEXL1z6f48EIj6xDWbD1kragVyc6q8ZF_fUJ0PYCa65o28kxZpL3WmjU"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary-container w-full py-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto fade-in-up">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-on-primary block mb-4">Champions Sports Academy</span>
+<p class="font-caption text-caption text-on-primary-container">© 2024 Champions Sports Academy. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-label-bold text-on-primary mb-2">Quick Links</span>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-label-bold text-on-primary mb-2">Support</span>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Support Center</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary" href="#">Sitemap</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-label-bold text-on-primary mb-2">Follow Us</span>
+<div class="flex gap-4">
+<!-- Social Placeholders -->
+<div class="w-8 h-8 bg-on-primary-container rounded-full hover:bg-secondary-container transition-colors cursor-pointer"></div>
+<div class="w-8 h-8 bg-on-primary-container rounded-full hover:bg-secondary-container transition-colors cursor-pointer"></div>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple intersection observer for fade-in animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+        });
+    </script>
+</body></html>
